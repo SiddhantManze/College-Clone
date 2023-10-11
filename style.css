@@ -13,6 +13,9 @@
     position: relative;
 }
 
+.hero-btn:hover{
+    background-color: #555;
+}
 
 nav img {
     width: 150px;
