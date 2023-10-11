@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- <meta charset="utf-8"> -->
+    <title>University Website Design</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/3656aad70d.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
+
+</head>
+
+<body>
+    <section class="sub-header">
+        <nav>
+            <div class="nav-links" id="navLinks">
+                <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li> <a href="about.html">ABOUT</a></li>
+                    <li><a href="course.html">COURSE</a></li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li> <a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <h1>Contact Us</h1>
+
+    </section>
+
+    <section class="loaction">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3768.7977814339483!2d72.99337931531392!3d19.16032705429442!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7bf4daf8967d9%3A0xdd90bed2058f7eaa!2sDatta%20Meghe%20College%20Of%20Engineering!5e0!3m2!1sen!2sin!4v1659387119693!5m2!1sen!2sin"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+    </section>
+
+    <section class="contact-us">
+        <div class="row">
+            <div class="contact-col">
+                <div>
+                    <i class="fa fa-home"></i>
+                    <span>
+                        <h5>Sector 3,Airoli</h5>
+                        <p>Navi Mumbia,Airoli,IN</p>
+                    </span>
+
+                </div>
+                <div>
+                    <i class="fa fa-phone"></i>
+                    <span>
+                        <h5>+91 81694623428</h5>
+                        <p>Monday to Saturday, 10PM to 6PM</p>
+                    </span>
+                </div>
+                <div>
+                    <i class="fa fa-envelope-o"></i>
+                    <span>
+                        <h5>adi@gmail.com</h5>
+                        <p>Email us your query</p>
+                    </span>
+                </div>
+            </div>
+            <div class="contact-col">
+                <form action="javascript-sendmail();" method="post">
+                    <input type="text" placeholder="Enter your name" name="name" id="name" required>
+                    <input type="email" placeholder="Enter your email address" name="email" id="email" required>
+                    <input type="text" placeholder="Enter your subject" name="subject" id="subject" required>
+                    <textarea rows="8" placeholder="Message" name="message" id="message" required></textarea>
+                    <button type="submit" class="hero-btn red-btn">Send Message</button>
+                </form>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="footer">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <br>quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <div class="icons">
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-linkedin"></i>
+        </div>
+    </section>
+    <script>
+        // javascript for phone nav close and open 
+        var navLink = document.getElementById("navLinks")
+
+        function showMenu() {
+            navLink.style.right = "0";
+        }
+
+        function hideMenu() {
+            navLink.style.right = "-250px";
+        }
+    </script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        function sendmail() {
+            Email.send({
+                Host: "smtp.gmail.com",
+                Username: "aditya5092008@gmail.com",
+                Password: "superrock509",
+                To: "adityarai50920@gmail.com",
+                From: "aditya5092008@gmail.com",
+                Subject: "New Mail on contact from" + name,
+                Body: "name:" + document.getElementById("name").value + "<br> Email:" + document.getElementById("email").value + "<br> Subject:" + document.getElementById("subject").value + "<br>message:" + document.getElementById("message").value
+            }).then(
+                message => alert("Message sent successfully")
+            );
+        }
+    </script>
+    <script type="module">
+        // Import the functions you need from the SDKs you need import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.1/firebase-app.js"; import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.9.1/firebase-analytics.js"; // TODO: Add
+        SDKs for Firebase products that you want to use // https://firebase.google.com/docs/web/setup#available-libraries // Your web app's Firebase configuration // For Firebase JS SDK v7.20.0 and later, measurementId is optional const firebaseConfig
+        = { apiKey: "AIzaSyAjiHvl3yl2tGqoMsSaKQyyqdTKBYC3srA", authDomain: "college-clone-7b7c6.firebaseapp.com", projectId: "college-clone-7b7c6", storageBucket: "college-clone-7b7c6.appspot.com", messagingSenderId: "13717286612", appId: "1:13717286612:web:bc2cfa43eb1f5a11739541",
+        measurementId: "G-5MS6TEDZ08" }; // Initialize Firebase const app = initializeApp(firebaseConfig); const analytics = getAnalytics(app);
+    </script>
+</body>
+
+
+</html>
