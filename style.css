@@ -77,6 +77,9 @@ nav img {
     position: relative;
     cursor: pointer;
 }
+.hero-btn:hover {
+  background-color: #fff;
+}
 
 nav .fa-solid {
     display: none;
